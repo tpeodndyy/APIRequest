@@ -56,8 +56,8 @@
 		F98BF4712049AADA0052280A /* APIRequest */ = {
 			isa = PBXGroup;
 			children = (
-				F9EE7BDB204C397500CC7FF2 /* NetworkEngine */,
-				F9EE7BD8204C397300CC7FF2 /* Parser */,
+				F9EE7BD1204C396400CC7FF2 /* UrlSession+NetworkEngine.swift */,
+				F9EE7BD9204C397300CC7FF2 /* APIRequest+Codable.swift */,
 				F9EE7BCE204C396400CC7FF2 /* APIRequest.swift */,
 				F9EE7BD2204C396400CC7FF2 /* APIResponse.swift */,
 				F9EE7BD0204C396400CC7FF2 /* NetworkEngine.swift */,
@@ -65,22 +65,6 @@
 				F98BF4732049AADA0052280A /* Info.plist */,
 			);
 			path = APIRequest;
-			sourceTree = "<group>";
-		};
-		F9EE7BD8204C397300CC7FF2 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				F9EE7BD9204C397300CC7FF2 /* APIRequest+Codable.swift */,
-			);
-			path = Parser;
-			sourceTree = "<group>";
-		};
-		F9EE7BDB204C397500CC7FF2 /* NetworkEngine */ = {
-			isa = PBXGroup;
-			children = (
-				F9EE7BD1204C396400CC7FF2 /* UrlSession+NetworkEngine.swift */,
-			);
-			path = NetworkEngine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
