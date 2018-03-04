@@ -12,21 +12,21 @@
 		F98BF4B02049AB120052280A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98BF4AE2049AB120052280A /* Main.storyboard */; };
 		F98BF4B22049AB120052280A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98BF4B12049AB120052280A /* Assets.xcassets */; };
 		F98BF4B52049AB120052280A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98BF4B32049AB120052280A /* LaunchScreen.storyboard */; };
-		F98BF4BD2049AB1F0052280A /* APIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F98BF4BC2049AB1F0052280A /* APIRequest.framework */; };
-		F98BF4BE2049AB1F0052280A /* APIRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F98BF4BC2049AB1F0052280A /* APIRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9EE7BCC204C38F800CC7FF2 /* APIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */; };
+		F9EE7BCD204C38F800CC7FF2 /* APIRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9F175B3204B0585000534F2 /* MyAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F175B2204B0585000534F2 /* MyAPIRequest.swift */; };
 		F9F175B5204BAFDD000534F2 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F175B4204BAFDD000534F2 /* SearchRequest.swift */; };
 		F9F175B9204BB190000534F2 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F175B8204BB190000534F2 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F98BF4BF2049AB1F0052280A /* Embed Frameworks */ = {
+		F9EE7BCA204C38EB00CC7FF2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F98BF4BE2049AB1F0052280A /* APIRequest.framework in Embed Frameworks */,
+				F9EE7BCD204C38F800CC7FF2 /* APIRequest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +41,7 @@
 		F98BF4B12049AB120052280A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F98BF4B42049AB120052280A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F98BF4B62049AB120052280A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F98BF4BC2049AB1F0052280A /* APIRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F175B2204B0585000534F2 /* MyAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPIRequest.swift; sourceTree = "<group>"; };
 		F9F175B4204BAFDD000534F2 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		F9F175B8204BB190000534F2 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F98BF4BD2049AB1F0052280A /* APIRequest.framework in Frameworks */,
+				F9EE7BCC204C38F800CC7FF2 /* APIRequest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 		F98BF49E2049AB110052280A = {
 			isa = PBXGroup;
 			children = (
-				F98BF4BC2049AB1F0052280A /* APIRequest.framework */,
+				F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */,
 				F98BF4A92049AB110052280A /* Example */,
 				F98BF4A82049AB110052280A /* Products */,
 			);
@@ -126,7 +126,7 @@
 				F98BF4A32049AB110052280A /* Sources */,
 				F98BF4A42049AB110052280A /* Frameworks */,
 				F98BF4A52049AB110052280A /* Resources */,
-				F98BF4BF2049AB1F0052280A /* Embed Frameworks */,
+				F9EE7BCA204C38EB00CC7FF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
