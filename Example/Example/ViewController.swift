@@ -18,7 +18,7 @@ class ViewController: UITableViewController {
     }
 
     func loadPosts() {
-        let searchRequest = SearchRequest(searchOption: SearchOption(userId: "1"))
+        let searchRequest = CustomParameterSearchRequest(searchOption: SearchOption(userId: "1"))
         URLSession.shared.send(apiRequest: searchRequest) { [weak self]
             (posts, error) in
             guard let `self` = self else {

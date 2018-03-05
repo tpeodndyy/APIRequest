@@ -12,6 +12,7 @@
 		F98BF4B02049AB120052280A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98BF4AE2049AB120052280A /* Main.storyboard */; };
 		F98BF4B22049AB120052280A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98BF4B12049AB120052280A /* Assets.xcassets */; };
 		F98BF4B52049AB120052280A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F98BF4B32049AB120052280A /* LaunchScreen.storyboard */; };
+		F9C357D9204DA95000E0B686 /* CustomParameterSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C357D8204DA95000E0B686 /* CustomParameterSearchRequest.swift */; };
 		F9EE7BCC204C38F800CC7FF2 /* APIRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */; };
 		F9EE7BCD204C38F800CC7FF2 /* APIRequest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9F175B3204B0585000534F2 /* MyAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F175B2204B0585000534F2 /* MyAPIRequest.swift */; };
@@ -41,6 +42,7 @@
 		F98BF4B12049AB120052280A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F98BF4B42049AB120052280A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F98BF4B62049AB120052280A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C357D8204DA95000E0B686 /* CustomParameterSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomParameterSearchRequest.swift; sourceTree = "<group>"; };
 		F9EE7BCB204C38F800CC7FF2 /* APIRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9F175B2204B0585000534F2 /* MyAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAPIRequest.swift; sourceTree = "<group>"; };
 		F9F175B4204BAFDD000534F2 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				F9F175B2204B0585000534F2 /* MyAPIRequest.swift */,
 				F9F175B4204BAFDD000534F2 /* SearchRequest.swift */,
+				F9C357D8204DA95000E0B686 /* CustomParameterSearchRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C357D9204DA95000E0B686 /* CustomParameterSearchRequest.swift in Sources */,
 				F98BF4AD2049AB120052280A /* ViewController.swift in Sources */,
 				F9F175B9204BB190000534F2 /* SearchResponse.swift in Sources */,
 				F9F175B5204BAFDD000534F2 /* SearchRequest.swift in Sources */,

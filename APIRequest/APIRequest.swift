@@ -32,7 +32,9 @@ public protocol APIRequest {
     var host: String { get }
     var path: String { get }
     var headers: [String: String] { get }
-    var parameters: [String: String] { get }
+    
+    var encodedParametersData: Data? { get }
+    var parameters: [String: Any] { get }
     
     var cachePolicy: URLRequest.CachePolicy { get }
     var timeout: TimeInterval { get }
@@ -45,6 +47,10 @@ public protocol APIRequest {
 
 public extension APIRequest {
     
+    var encodedParametersData: Data? {
+        return try? JSONEncoder().encode(parameters)
+    }
+    
     var urlRequest: URLRequest? {
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme.rawValue
@@ -52,7 +58,7 @@ public extension APIRequest {
         urlComponents.path = path
         
         if method == .GET {
-            urlComponents.queryItems = parameters.map( { URLQueryItem(name: $0.key, value: $0.value) } )
+            urlComponents.queryItems = parameters.map( { URLQueryItem(name: $0.key, value: "\($0.value)") } )
         }
         
         guard let url = urlComponents.url else {
@@ -61,7 +67,7 @@ public extension APIRequest {
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
-        if method == .POST, let httpBody = try? JSONEncoder().encode(parameters) {
+        if method == .POST, let httpBody = encodedParametersData {
             urlRequest.httpBody = httpBody
         }
         
@@ -71,3 +77,9 @@ public extension APIRequest {
     }
     
 }
+
+public protocol CustomParameterAPIRequest {
+    associatedtype CustomParameterType
+    var customParameters: CustomParameterType? { get set }
+}
+

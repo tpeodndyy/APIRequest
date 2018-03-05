@@ -1,20 +1,17 @@
 //
-//  SearchRequest.swift
+//  CustomParameterSearchRequest.swift
 //  Example
 //
-//  Created by Peera Kerdkokaew on 4/3/18.
+//  Created by Peera Kerdkokaew on 6/3/18.
 //  Copyright © 2018 Peera Kerdkokaew. All rights reserved.
 //
 
 import UIKit
 import APIRequest
 
-struct SearchOption: Codable {
-    let userId: String
-}
-
-struct SearchRequest: MyAPIRequest {
+struct CustomParameterSearchRequest: MyAPIRequest, CustomParameterAPIRequest {
     
+    typealias CustomParameterType = SearchOption
     typealias ResponseType = Array<Post>
     
     var method: HTTPMethod {
@@ -29,8 +26,12 @@ struct SearchRequest: MyAPIRequest {
         return [:]
     }
     
-    var parameters: [String: Any] {
-        return ["userId": searchOption.userId]
+    var customParameters: SearchOption? {
+        get {
+            return searchOption
+        } set {
+            
+        }
     }
     
     let searchOption: SearchOption
