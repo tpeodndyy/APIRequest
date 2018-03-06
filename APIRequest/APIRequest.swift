@@ -78,8 +78,8 @@ public extension APIRequest {
     
 }
 
-public protocol CustomParameterAPIRequest {
-    associatedtype CustomParameterType
-    var customParameters: CustomParameterType? { get set }
+public protocol ParameterizeAPIRequest {
+    associatedtype APIParameterType
+    var apiParameter: APIParameterType? { get set }
 }
 

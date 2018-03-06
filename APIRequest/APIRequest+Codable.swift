@@ -16,10 +16,10 @@ public extension APIRequest where ResponseType: Codable {
     
 }
 
-public extension APIRequest where Self: CustomParameterAPIRequest, Self.CustomParameterType: Codable {
+public extension APIRequest where Self: ParameterizeAPIRequest, Self.APIParameterType: Codable {
     
     var parameters: [String: Any] {
-        guard let data = try? JSONEncoder().encode(customParameters) else {
+        guard let data = try? JSONEncoder().encode(apiParameter) else {
             return [:]
         }
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap( { $0 as? [String: Any] } ) ?? [:]

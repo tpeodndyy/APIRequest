@@ -9,9 +9,9 @@
 import UIKit
 import APIRequest
 
-struct CustomParameterSearchRequest: MyAPIRequest, CustomParameterAPIRequest {
+struct CustomParameterSearchRequest: MyAPIRequest, ParameterizeAPIRequest {
     
-    typealias CustomParameterType = SearchOption
+    typealias APIParameterType = SearchOption
     typealias ResponseType = Array<Post>
     
     var method: HTTPMethod {
@@ -26,18 +26,10 @@ struct CustomParameterSearchRequest: MyAPIRequest, CustomParameterAPIRequest {
         return [:]
     }
     
-    var customParameters: SearchOption? {
-        get {
-            return searchOption
-        } set {
-            
-        }
-    }
-    
-    let searchOption: SearchOption
+    var apiParameter: SearchOption?
     
     init(searchOption: SearchOption) {
-        self.searchOption = searchOption
+        self.apiParameter = searchOption
     }
     
     
