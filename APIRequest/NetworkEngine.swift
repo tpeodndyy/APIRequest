@@ -23,8 +23,15 @@ public enum NetworkError: Error {
     
 }
 
+public struct NetworkEngineNotification {
+    public static let activityStart = "NetworkEngineNotification.activityStart"
+    public static let activityEnd = "NetworkEngineNotification.activityEnd"
+}
+
 public protocol NetworkEngine {
     
+    func notifyNetworkActivityStart()
+    func notifyNetworkActivityEnd()
     func send<T: APIRequest>(apiRequest: T,
                              completion: @escaping ((_ response: T.ResponseType?, _ error: NetworkError?) -> Void))
     func handleCompletion<T: APIRequest>(of request: T, data: Data?, response: URLResponse?, error: Error?,
@@ -34,8 +41,17 @@ public protocol NetworkEngine {
 
 extension NetworkEngine {
     
+    public func notifyNetworkActivityStart() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NetworkEngineNotification.activityStart), object: nil)
+    }
+    
+    public func notifyNetworkActivityEnd() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NetworkEngineNotification.activityEnd), object: nil)
+    }
+    
     public func handleCompletion<T: APIRequest>(of request: T, data: Data?, response: URLResponse?, error: Error?,
                                          completion: ((_ response: T.ResponseType?, _ error: NetworkError?) -> Void)) {
+        notifyNetworkActivityEnd()
         if let error = NetworkError(response: response, error: error) {
             completion(nil, error)
         } else if let data = data,

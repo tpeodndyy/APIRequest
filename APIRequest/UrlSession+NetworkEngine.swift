@@ -16,6 +16,7 @@ extension URLSession: NetworkEngine {
             completion(nil, .requestInitialationFailed)
             return
         }
+        notifyNetworkActivityStart()
         dataTask(with: urlRequest) { (data, response, error) in
             self.handleCompletion(of: apiRequest,
                                   data: data,
