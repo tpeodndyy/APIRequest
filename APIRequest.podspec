@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "APIRequest"
-  s.version      = "0.3.2"
+  s.version      = "0.3.3"
   s.summary      = "This is the interface for constructing API request."
   s.description  = "This is the interface for constructing API request. This framework will not include networking layer but will produce the outcome as URLRequest to be injected in networking layer."
   s.homepage     = "https://github.com/tpeodndyy/APIRequest"

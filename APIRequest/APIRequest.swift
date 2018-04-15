@@ -48,7 +48,7 @@ public protocol APIRequest {
 public extension APIRequest {
     
     var encodedParametersData: Data? {
-        return try? JSONEncoder().encode(parameters)
+        return try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
     }
     
     var urlRequest: URLRequest? {
