@@ -11,7 +11,7 @@ import UIKit
 public enum NetworkError: Error {
     
     case requestInitialationFailed
-    case parsingResponseFailed
+    case parsingResponseFailed(Error?)
     case unknown
     
     init?(response: URLResponse?, error: Error?) {
@@ -54,11 +54,16 @@ extension NetworkEngine {
         notifyNetworkActivityEnd()
         if let error = NetworkError(response: response, error: error) {
             completion(nil, error)
-        } else if let data = data,
-            let apiResponse = try? request.parse(data: data) {
-            completion(apiResponse, nil)
+        } else if let data = data {
+            do {
+                let apiResponse = try request.parse(data: data)
+                completion(apiResponse, nil)
+            } catch {
+                print("Exception on parsing response: \(error)")
+                completion(nil, .parsingResponseFailed(error))
+            }
         } else {
-            completion(nil, .parsingResponseFailed)
+            completion(nil, .unknown)
         }
     }
     
